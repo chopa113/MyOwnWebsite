@@ -1,51 +1,98 @@
 * {
-    color: red;
-    padding: 0px;
-    margin: 0%;
-    border: 0px;
-    margin-bottom: 4vh;
-    background-image: url(https://static.wikia.nocookie.net/minecraft-win10-edition/images/a/aa/Lava.gif/revision/latest?cb=20150829200822);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-image: url('https://static.wikia.nocookie.net/minecraft-win10-edition/images/a/aa/Lava.gif/revision/latest?cb=20150829200822');
+    font-family: sans-serif;
 }
 
 header {
-    border-style: solid;
-    border-width: 2px;
-    background-color: white;
+    border: 8px solid red;
     text-align: center;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-    width: 90%;
+    max-width: 90%;
     height: 10vh;
-    margin: auto;
+    margin: 2vh auto;
 }
 
 article {
-    border-style: solid;
-    border-width: 2px;
-    border-color: red;
-    background-color: white;
+    border: 8px solid red;
     text-align: center;
-    justify-content: center;
     display: flex;
-    width: 90%;
-    height: 50vh;
-    margin: auto;
-    margin-top: 2vh;
-    font-size: large;
-    color:rgb(100, 0, 0) ;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+    padding: 2vh;
+    margin: 2vh auto;
+    font-size: 3vh;
+    color: rgb(100, 0, 0);
 }
 
 footer {
-    border-style: solid;
-    border-width: 2px;
-    background-color: white;
+    border: 8px solid red;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    display: flex;
-    width: 90%;
-    height: 20vh;
-    margin: auto;
-    margin-top: 2vh;
+    max-width: 90%;
+    padding: 2vh;
+    margin: 2vh auto;
+    gap: 1rem;
+}
+
+footer img {
+    max-width: 45%;
+    height: auto;
+}
+
+.image {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    header img {
+        max-width: 90%;
+    }
+
+    article {
+        font-size: 2.5vh;
+    }
+
+    header, footer {
+        flex-direction: column;
+        height: auto;
+        padding: 2vh;
+    }
+
+    footer img {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    article {
+        font-size: 2vh;
+    }
+
+    .image {
+        max-width: 100%;
+    }
+
+    footer img {
+        max-width: 100%;
+    }
 }
